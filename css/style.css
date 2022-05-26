@@ -1,0 +1,155 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #000000;
+        --main-text-color: #FFFFFF;
+        --main-link-color: #6200EE;
+        --2nd-link-color: #03DAC6;
+        --nav-bg-color: #018786;
+    }
+    /* Dark theme styles go here */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: #FFFFFF;
+        --main-text-color: #000000;
+        --main-link-color: #018786;
+        --2nd-link-color: #03DAC6;
+        --nav-bg-color: #000000;
+    }
+    /* Light theme styles go here */
+}
+
+
+/* ======== BODY GO SOLO BABY ======== */
+
+body {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas: "profileIcon PAYATTENTIONTOME darkToggle"
+    "blogArticle blogArticle blogArticle"
+    "itsTheFooter null null"; */
+}
+
+/* ======== PICTURE/HEADER ======== */
+
+header {
+}
+
+.whoIsMe {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+img {
+
+}
+
+.profileIcon {
+    border-radius: 100px;
+    max-width: 150px;
+    /* grid-area: profileIcon; */
+}
+
+h1, h2 {
+
+}
+
+/* ======== DARK MODE BUTTON ========*/
+
+.darkToggle {
+    /* grid-area: darkToggle; */
+}
+
+/* ======== NAVIGATION LINKS ======== */
+
+.PAYATTENTIONTOME {
+    /* grid-area: PAYATTENTIONTOME; */
+}
+
+nav {
+    font-family: 'VT323', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: var(--nav-bg-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+a:link {
+    color: var(--main-link-color);
+}
+
+a:visited {
+    color: var(--main-link-color);
+}
+
+a: {
+
+}
+
+/* ======== ARTICLE STYLES ========*/
+
+
+main {
+    height: 40rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* margin: auto; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blogArticle {
+    background-color: ;
+    margin: 1rem;
+    min-width: 50vw;
+    max-width: 80vw;
+    margin: auto auto 10px auto;
+    border-style: solid hidden solid hidden;
+    border-width: 5px;
+    border-radius: 10px;
+    /* grid-area: blogArticle; */
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    border-style: hidden hidden groove hidden;
+    border-width: 5px;
+}
+
+.blogText {
+    text-indent: 40px;
+    /* text-shadow: 0 0 1px #232323; */
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+footer {
+    padding: 20px;
+}
+
+.itsTheFooter {
+    /* grid-area: itsTheFooter; */
+}
+
+/* ========= DESKTOP STYLE ========*/
+
+@media screen and (min-width:768px) {
+
+
+}

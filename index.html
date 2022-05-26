@@ -4,40 +4,91 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Fonts we're gonna be using. -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- css style sheets -->
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+		<!-- js scripts we might be running on this page -->
 		<script defer src="./js/scripts.js"></script>
 		<title>Soma Muñoz</title>
 	</head>
 	<body>
+		<!-- initial top-level stuff people will see -->
 		<header>
-			<img src="" alt="" />
-			<h1>Soma Muñoz</h1>
-			<h2>Software Engineer</h2>
-			<div id="PAYATTENTIONTOME">
-				<a href="https://github.com/StarlightStingray">Github</a>
-				<a href="https://www.linkedin.com/in/soma-munoz-964552185/">LinkedIn</a>
-				<a href="mailto:somajstingray@gmail.com">E-Mail</a>
-				<a href=""></a>
-				<a href=""></a>
+			<div class="whoIsMe">
+				<img
+					class="profileIcon"
+					src="./assets/XzaLvuO.jpg"
+					alt="the face of someone you might be able to trust, but you're not sure yet!"
+				/>
+				<div class="myDetails">
+					<h1>Soma Muñoz</h1>
+					<h2>Software Engineer</h2>
+					<div class="PAYATTENTIONTOME">
+						<a href="https://github.com/StarlightStingray">Github</a>
+						<a href="https://www.linkedin.com/in/soma-munoz-964552185/"
+							>LinkedIn</a
+						>
+						<a href="mailto:somajstingray@gmail.com">E-Mail</a>
+						<a href=""></a>
+						<a href=""></a>
+					</div>
+				</div>
 			</div>
+			<!-- navigation bar for the website -->
 			<nav>
 				<a href="https://soma-munoz.netlify.app/">Home</a>
-				<a href="http://">Bio</a>
-				<a href="http://">Projects</a>
-				<a href="http://">Resume</a>
-				<a href="http://">Links</a>
+				<a href="bio.html">Bio</a>
+				<a href="projects.html">Projects</a>
+				<a href="resume.html">Resume</a>
+				<!-- <a href="http://">Links</a> -->
 			</nav>
 		</header>
 		<main>
-			<h2>Hey there! I hope you're having a great day!</h2>
-			<p>
-				Everything you've ever known and loved in life has been a lie fed to you
-				by the---oh wait what was the point of this site again??? Ah yes. I'm a
-				software engineer, and I make text and numbers do incredible things when
-				I shove them into certain places. It's called magic, folks - LOOK IT UP.
-			</p>
+			<article class="blogArticle">
+				<h3>Hey there! I hope you're having a great day!</h3>
+				<p class="blogText">
+					Everything you've ever known and loved in life has been a lie fed to
+					you by the---oh wait what was the point of this site again??? Ah yes.
+					I'm a software engineer, and I make text and numbers do incredible
+					things when I shove them into certain places. It's called magic, folks
+					- LOOK IT UP.
+				</p>
+			</article>
+			<article class="blogArticle">
+				<h3>Today's gonna be a great day!</h3>
+				<p class="blogText">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+					repellendus nisi, eos assumenda quam quidem nobis consequuntur
+					expedita adipisci magnam voluptate aut, dignissimos amet odio beatae
+					nam quae ducimus provident?
+				</p>
+			</article>
+			<article class="blogArticle">
+				<h3>Nobody's ever gonna go to camp for this.</h3>
+				<p class="blogText">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quasi,
+					ab libero cupiditate dolorum quisquam distinctio temporibus accusamus
+					ea a architecto expedita harum repellat unde illo reiciendis? Dicta,
+					beatae accusantium?
+				</p>
+			</article>
+			<article class="blogArticle">
+				<h3>Las Vegas Bodies piling up</h3>
+				<p class="blogText">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+					similique nemo obcaecati non deserunt, eaque iure odio eos aliquid
+					rerum. Blanditiis accusantium consequatur amet culpa similique officia
+					totam odio tempore.
+				</p>
+			</article>
 		</main>
 	</body>
-	<footer>&copy; Soma Muñoz</footer>
+	<footer class="itsTheFooter">&copy; Soma Muñoz</footer>
 </html>
