@@ -1,10 +1,18 @@
+:root {
+    --default-font-size: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-bg-color: #000000;
+        --main-bg-color: #121212;
+        --2nd-bg-color: #BB86FC33;
         --main-text-color: #FFFFFF;
+        --2nd-text-color: #BB86FC;
         --main-link-color: #6200EE;
         --2nd-link-color: #03DAC6;
-        --nav-bg-color: #018786;
+        --nav-bg-color: #03DAC6bb;
+        --border-color: ;
+        
     }
     /* Dark theme styles go here */
 }
@@ -20,13 +28,17 @@
     /* Light theme styles go here */
 }
 
-
 /* ======== BODY GO SOLO BABY ======== */
 
 body {
     background: var(--main-bg-color);
     color: var(--main-text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: scroll; */
+    font-family: 'VT323',
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 /* ======== PICTURE/HEADER ======== */
@@ -35,21 +47,18 @@ header {
 }
 
 .whoIsMe {
-    font-size: 18px;
+    font-size: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-}
-
-img {
-
+    margin: 20px 0px 0px 0px;
 }
 
 .profileIcon {
     border-radius: 100px;
     max-width: 150px;
+    margin: 0px 20px 0px 0px;
     /* grid-area: profileIcon; */
 }
 
@@ -65,20 +74,23 @@ h1, h2 {
 
 /* ======== NAVIGATION LINKS ======== */
 
-.PAYATTENTIONTOME {
+#PAYATTENTIONTOME {
+    font-size: 24px;
     /* grid-area: PAYATTENTIONTOME; */
 }
 
 nav {
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     background: var(--nav-bg-color);
     width: 100vw;
     display: flex;
     flex-direction: row;
+    border-style: solid hidden solid hidden;
+    border-width: 3px;
+    border-radius: 5px;
     justify-content: space-around;
-    padding: 5px;
-    margin-bottom: 40px;
+    padding: 12px;
+    margin: 30px 0px 50px 0px;
 }
 
 a:link {
@@ -97,36 +109,44 @@ a: {
 
 
 main {
-    height: 40rem;
-    width: 100vw;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    /* margin: auto; */
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
 }
 
 .blogArticle {
+    background: var(--2nd-bg-color);
     margin: 1rem;
+    min-height: 10rem;
+    overflow: hidden;
     min-width: 50vw;
     max-width: 80vw;
-    margin: auto auto 10px auto;
+    margin: 1rem 0;
     border-style: solid hidden solid hidden;
-    border-width: 5px;
+    border-width: 3px;
     border-radius: 10px;
     /* grid-area: blogArticle; */
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 28px;
     text-align: center;
     border-style: hidden hidden groove hidden;
+    border-color: ;
     border-width: 5px;
+    padding: 20px;
 }
+
 
 .blogText {
     text-indent: 40px;
+    font-size: var(--default-font-size);
+    line-height: calc(var(--default-font-size) + 8px);
     /* text-shadow: 0 0 1px #232323; */
-    margin-left: 10px;
-    margin-right: 5px;
+    margin: 15px 20px;
 }
 
 footer {
@@ -148,18 +168,13 @@ footer {
         margin: 30px;
     }
     
-    img {
-        
-    }
-    
     .profileIcon {
         border-radius: 100px;
         max-width: 150px;
         /* grid-area: profileIcon; */
     }
     nav {
-        font-family: 'VT323', Arial, Helvetica, sans-serif;
-        font-size: 40px;
+        font-size: 36px;
         background: var(--nav-bg-color);
         min-width: 10rem;
         max-width: 10rem;
@@ -169,6 +184,10 @@ footer {
         margin-bottom: 40px;
         position: absolute;
         float: left;
+    }
+
+    .navLinks {
+        margin: 6px 0px;
     }
 
     .blogArticle {
