@@ -20,6 +20,10 @@
 	</head>
 	<body>
 		<!-- initial top-level stuff people will see -->
+		<label class="switch">
+			<input class="modeSwitch" type="checkbox" onClick="toggleDarkMode()" />
+			<span class="slider round"></span>
+		</label>
 		<header>
 			<div class="whoIsMe">
 				<img
@@ -43,18 +47,18 @@
 			</div>
 			<!-- navigation bar for the website -->
 			<nav>
-				<a href="./index.html">Home</a>
-				<a href="./bio.html">Bio</a>
-				<a href="./projects.html">Projects</a>
-				<a href="./resume.html">Resume</a>
-				<!-- <a href="http://">Links</a> -->
+				<a class="navLinks" href="./index.html">Home</a>
+				<a class="navLinks" href="./bio.html">Bio</a>
+				<a class="navLinks" href="./projects.html">Projects</a>
+				<a class="navLinks" href="./resume.html">Resume</a>
 			</nav>
 		</header>
-		<button class="toggleDrkMode" onClick="toggleDarkMode()">
-			Toggle Light/Dark Mode
-		</button>
-		<main></main>
-
-		<footer class="itsTheFooter">&copy; 2022 Soma Muñoz</footer>
+		<main>
+			<article class="blogArticle">
+				<h3>Hi, this is the projects page.</h3>
+				<p class="blogText">Hello, this is the projects main body text.</p>
+			</article>
+			<footer class="itsTheFooter">&copy; 2022 Soma Muñoz</footer>
+		</main>
 	</body>
 </html>
