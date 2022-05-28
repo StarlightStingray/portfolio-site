@@ -1,32 +1,124 @@
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg-color: #000000;
-        --main-text-color: #FFFFFF;
-        --main-link-color: #6200EE;
-        --2nd-link-color: #03DAC6;
-        --nav-bg-color: #018786;
-    }
-    /* Dark theme styles go here */
+:root {
+    --default-font-size: 1.5rem;
 }
 
+/* Dark Mode is the assumed default. Styles for it go here */
+:root, :root.dark {
+    --main-bg-color: #121212;
+    --2nd-bg-color: #BB86FC33;
+    --main-text-color: #FFFFFF;
+    --2nd-text-color: #BB86FC;
+    --main-link-color: #6200EE;
+    --2nd-link-color: #6200EE;
+    --nav-bg-color: #03DAC6cc;
+    --main-border-color: #FFFFFF;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root.dark {
+        --main-bg-color: #121212;
+        --2nd-bg-color: #BB86FC33;
+        --main-text-color: #FFFFFF;
+        --2nd-text-color: #BB86FC;
+        --main-link-color: #6200EE;
+        --2nd-link-color: #6200EE;
+        --nav-bg-color: #03DAC6cc;
+        --main-border-color: #FFFFFF;
+    }
+} */
+
 @media (prefers-color-scheme: light) {
-    :root {
-        --main-bg-color: #FFFFFF;
+    :root.light {
+        --main-bg-color: #F8F0E3;
+        --2nd-bg-color: #BB86FC88;
         --main-text-color: #000000;
-        --main-link-color: #018786;
-        --2nd-link-color: #03DAC6;
-        --nav-bg-color: #000000;
+        --2nd-text-color: #BB86FC;
+        --main-link-color: #03DAC6;
+        --2nd-link-color: #018786;
+        --nav-bg-color: #6200EEaa;
+        --main-border-color: #000000;
     }
     /* Light theme styles go here */
 }
 
+/* ======== Dark/Light Mode Toggle Button ========*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    float: right;
+    width: 60px;
+    height: 34px;
+    margin-left: -1rem;
+    margin-right: 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--nav-bg-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--nav-bg-color);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--nav-bg-color);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
 
 /* ======== BODY GO SOLO BABY ======== */
 
 body {
     background: var(--main-bg-color);
     color: var(--main-text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: scroll; */
+    font-family: 'VT323',
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 /* ======== PICTURE/HEADER ======== */
@@ -35,21 +127,18 @@ header {
 }
 
 .whoIsMe {
-    font-size: 18px;
+    font-size: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-}
-
-img {
-
+    margin: 20px 0px 0px 0px;
 }
 
 .profileIcon {
     border-radius: 100px;
     max-width: 150px;
+    margin: 0px 20px 0px 0px;
     /* grid-area: profileIcon; */
 }
 
@@ -65,20 +154,24 @@ h1, h2 {
 
 /* ======== NAVIGATION LINKS ======== */
 
-.PAYATTENTIONTOME {
+#PAYATTENTIONTOME {
+    font-size: 24px;
     /* grid-area: PAYATTENTIONTOME; */
 }
 
 nav {
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 2.5rem;
     background: var(--nav-bg-color);
     width: 100vw;
     display: flex;
     flex-direction: row;
+    border-style: solid hidden solid hidden;
+    border-color: var(--main-border-color);
+    border-width: 3px;
+    border-radius: 5px;
     justify-content: space-around;
-    padding: 5px;
-    margin-bottom: 40px;
+    padding: 12px;
+    margin: 30px 0px 50px 0px;
 }
 
 a:link {
@@ -89,44 +182,52 @@ a:visited {
     color: var(--main-link-color);
 }
 
-a: {
-
+#PAYATTENTIONTOME a {
+    color: var(--2nd-link-color);
 }
 
 /* ======== ARTICLE STYLES ========*/
 
 
 main {
-    height: 40rem;
-    width: 100vw;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    /* margin: auto; */
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
 }
 
 .blogArticle {
+    background: var(--2nd-bg-color);
     margin: 1rem;
-    min-width: 50vw;
+    min-height: 10rem;
+    overflow: hidden;
     max-width: 80vw;
-    margin: auto auto 10px auto;
+    margin: 1rem 0;
     border-style: solid hidden solid hidden;
-    border-width: 5px;
+    border-color: var(--main-border-color);
+    border-width: 3px;
     border-radius: 10px;
     /* grid-area: blogArticle; */
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 2.5rem;
     text-align: center;
     border-style: hidden hidden groove hidden;
+    border-color: var(--main-border-color);
     border-width: 5px;
+    padding: 20px 0px;
 }
+
 
 .blogText {
     text-indent: 40px;
+    font-size: var(--default-font-size);
+    line-height: calc(var(--default-font-size) + 8px);
     /* text-shadow: 0 0 1px #232323; */
-    margin-left: 10px;
-    margin-right: 5px;
+    margin: 15px 20px;
 }
 
 footer {
@@ -140,16 +241,10 @@ footer {
 
 @media screen and (min-width:768px) {
     .whoIsMe {
-        max-width: 90vh;
-        font-size: 18px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         margin: 30px;
-    }
-    
-    img {
-        
     }
     
     .profileIcon {
@@ -158,22 +253,27 @@ footer {
         /* grid-area: profileIcon; */
     }
     nav {
-        font-family: 'VT323', Arial, Helvetica, sans-serif;
-        font-size: 40px;
+        font-size: 3rem;
         background: var(--nav-bg-color);
         min-width: 10rem;
         max-width: 10rem;
         flex-direction: column;
         justify-content: space-around;
         padding: 5px;
+        border-width: 5px;
         margin-bottom: 40px;
         position: absolute;
         float: left;
     }
 
+    .navLinks {
+        margin: 6px 0px;
+    }
+
     .blogArticle {
         max-width: 50vw;
         border-style: solid hidden solid hidden;
+        justify-content: center;
         border-width: 5px;
         border-radius: 10px;
         /* grid-area: blogArticle; */
