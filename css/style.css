@@ -14,19 +14,6 @@
     --main-border-color: #FFFFFF;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root.dark {
-        --main-bg-color: #121212;
-        --2nd-bg-color: #BB86FC33;
-        --main-text-color: #FFFFFF;
-        --2nd-text-color: #BB86FC;
-        --main-link-color: #6200EE;
-        --2nd-link-color: #6200EE;
-        --nav-bg-color: #03DAC6cc;
-        --main-border-color: #FFFFFF;
-    }
-} */
-
 @media (prefers-color-scheme: light) {
     :root.light {
         --main-bg-color: #F8F0E3;
