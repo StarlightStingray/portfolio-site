@@ -109,11 +109,6 @@ input:checked+.clicker:before {
 }
 
 /* ======== THE BIG BOIS THREE ======== */
-
-/* html {
-    min-height: 1080px;
-} */
-
 main {
     display: flex;
     flex-direction: column;
@@ -131,7 +126,13 @@ body {
     Arial,
     Helvetica,
     sans-serif;
-    
+}
+
+.itsTheFooter {
+    display: flex;
+    margin-top: 20rem;
+    margin-bottom: 2rem;
+    justify-content: center;;
 }
 
 /* ======== PICTURE/HEADER ======== */
@@ -191,9 +192,9 @@ a:visited {
 .blogArticle {
     background: var(--2nd-bg-color);
     margin: 1rem;
-    min-height: 10rem;
+    min-height: 20rem;
     overflow: hidden;
-    max-width: 80vw;
+    max-width: 85vw;
     margin: 1rem 0;
     border-style: solid hidden solid hidden;
     border-color: var(--main-border-color);
@@ -208,7 +209,7 @@ h3 {
     border-style: hidden hidden groove hidden;
     border-color: var(--main-border-color);
     border-width: 5px;
-    padding: 20px 0px;
+    padding: 20px 20px;
 }
 
 
@@ -223,7 +224,7 @@ h3 {
 /* ========= PROJECTS PAGE CAROUSEL ======== */
 
 .slider {
-    width: 80vw;
+    width: 85vw;
     min-height: 500px;
     overflow: hidden;
     position: relative;
@@ -330,7 +331,8 @@ h3 {
     }
 
     .blogArticle {
-        max-width: 50vw;
+        max-width: 70vw;
+        margin-left: 10rem;
         border-style: solid hidden solid hidden;
         justify-content: center;
         border-width: 5px;
@@ -340,7 +342,7 @@ h3 {
 /* ========= PROJECTS PAGE CAROUSEL - DESKTOP EDITION, YOOOOO~ ======== */
 
     .slider {
-        width: 70vw;
+        max-width: 70vw;
         margin-left: 10rem;
     }
     
