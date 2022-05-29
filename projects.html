@@ -22,7 +22,7 @@
 		<!-- initial top-level stuff people will see -->
 		<label class="switch">
 			<input class="modeSwitch" type="checkbox" onClick="toggleDarkMode()" />
-			<span class="slider round"></span>
+			<span class="clicker round"></span>
 		</label>
 		<header>
 			<div class="whoIsMe">
@@ -54,10 +54,25 @@
 			</nav>
 		</header>
 		<main>
-			<article class="blogArticle">
-				<h3>Hi, this is the projects page.</h3>
-				<p class="blogText">Hello, this is the projects main body text.</p>
-			</article>
+			<div class="slider">
+				<div class="slider-item active">
+					<h3>Hi, this is the projects page.</h3>
+					<p class="blogText">Hello, this is the projects main body text.</p>
+				</div>
+				<div class="slider-item">
+					<h3>yolo, swag, 420, project slider 2 baybeeeee~~.</h3>
+					<p class="blogText">let's go get donuts!!!</p>
+				</div>
+				<div class="slider-item">
+					<h3>This is Projects page Slider #3.</h3>
+					<p class="blogText">A pleasure to make your acquaintance.</p>
+				</div>
+				<span class="slider-control-prev" role="button">
+					<img aria-hidden="true" src="./assets/previous-svgrepo-com.svg" alt="Previous Slide Button"/>
+				</span>
+				<span class="slider-control-next" role="button">
+					<img aria-hidden="true" src="./assets/skip-svgrepo-com.svg" alt="Next Slide Button"/>
+			</div>
 			<footer class="itsTheFooter">&copy; 2022 Soma Muñoz</footer>
 		</main>
 	</body>
