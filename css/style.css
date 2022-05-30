@@ -37,7 +37,7 @@
     width: 60px;
     height: 34px;
     margin-left: -1rem;
-    margin-right: 1rem;
+    margin-right: 0rem;
 }
 
 /* Hide default HTML checkbox */
@@ -130,7 +130,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 10px;
 }
 
 .profileIcon {
@@ -148,12 +148,13 @@ body {
 
 #PAYATTENTIONTOME a {
     color: var(--2nd-link-color);
+    white-space: nowrap;
 }
 
 nav {
-    font-size: 2.5rem;
+    font-size: 2rem;
     background: var(--nav-bg-color);
-    width: 100vw;
+    width: 93vw;
     display: flex;
     flex-direction: row;
     border-style: solid hidden solid hidden;
@@ -162,7 +163,7 @@ nav {
     border-radius: 5px;
     justify-content: space-around;
     padding: 12px;
-    margin: 30px 0px 50px 0px;
+    margin: 30px auto 50px auto;
 }
 
 a:link {
@@ -182,7 +183,7 @@ a:visited {
     min-height: 20rem;
     overflow: hidden;
     max-width: 85vw;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     border-style: solid hidden solid hidden;
     border-color: var(--main-border-color);
     border-width: 3px;
