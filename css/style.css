@@ -14,19 +14,6 @@
     --main-border-color: #FFFFFF;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root.dark {
-        --main-bg-color: #121212;
-        --2nd-bg-color: #BB86FC33;
-        --main-text-color: #FFFFFF;
-        --2nd-text-color: #BB86FC;
-        --main-link-color: #6200EE;
-        --2nd-link-color: #6200EE;
-        --nav-bg-color: #03DAC6cc;
-        --main-border-color: #FFFFFF;
-    }
-} */
-
 @media (prefers-color-scheme: light) {
     :root.light {
         --main-bg-color: #F8F0E3;
@@ -50,7 +37,7 @@
     width: 60px;
     height: 34px;
     margin-left: -1rem;
-    margin-right: 1rem;
+    margin-right: 0rem;
 }
 
 /* Hide default HTML checkbox */
@@ -61,7 +48,7 @@
 }
 
 /* The slider */
-.slider {
+.clicker {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -69,11 +56,11 @@
     right: 0;
     bottom: 0;
     background-color: var(--nav-bg-color);
-    -webkit-transition: .4s;
+    transition: .4s;
     transition: .4s;
 }
 
-.slider:before {
+.clicker:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -81,34 +68,41 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
+    transition: .4s;
     transition: .4s;
 }
 
-input:checked+.slider {
+input:checked+.clicker {
     background-color: var(--nav-bg-color);
 }
 
-input:focus+.slider {
+input:focus+.clicker {
     box-shadow: 0 0 1px var(--nav-bg-color);
 }
 
-input:checked+.slider:before {
+input:checked+.clicker:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
 
 /* Rounded sliders */
-.slider.round {
+.clicker.round {
     border-radius: 34px;
 }
 
-.slider.round:before {
+.clicker.round:before {
     border-radius: 50%;
 }
 
-/* ======== BODY GO SOLO BABY ======== */
+/* ======== THE BIG BOIS THREE ======== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+}
 
 body {
     background: var(--main-bg-color);
@@ -121,10 +115,14 @@ body {
     sans-serif;
 }
 
-/* ======== PICTURE/HEADER ======== */
-
-header {
+.itsTheFooter {
+    display: flex;
+    margin-top: 20rem;
+    margin-bottom: 2rem;
+    justify-content: center;;
 }
+
+/* ======== PICTURE/HEADER ======== */
 
 .whoIsMe {
     font-size: 36px;
@@ -132,7 +130,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 10px;
 }
 
 .profileIcon {
@@ -142,27 +140,21 @@ header {
     /* grid-area: profileIcon; */
 }
 
-h1, h2 {
-
-}
-
-/* ======== DARK MODE BUTTON ========*/
-
-.darkToggle {
-    /* grid-area: darkToggle; */
-}
-
 /* ======== NAVIGATION LINKS ======== */
 
 #PAYATTENTIONTOME {
     font-size: 24px;
-    /* grid-area: PAYATTENTIONTOME; */
+}
+
+#PAYATTENTIONTOME a {
+    color: var(--2nd-link-color);
+    white-space: nowrap;
 }
 
 nav {
-    font-size: 2.5rem;
+    font-size: 2rem;
     background: var(--nav-bg-color);
-    width: 100vw;
+    width: 93vw;
     display: flex;
     flex-direction: row;
     border-style: solid hidden solid hidden;
@@ -171,7 +163,15 @@ nav {
     border-radius: 5px;
     justify-content: space-around;
     padding: 12px;
-    margin: 30px 0px 50px 0px;
+    margin: 30px auto 50px auto;
+}
+
+#kebabbed {
+    display: none;
+}
+
+#navToggler {
+    display: none;
 }
 
 a:link {
@@ -182,43 +182,30 @@ a:visited {
     color: var(--main-link-color);
 }
 
-#PAYATTENTIONTOME a {
-    color: var(--2nd-link-color);
-}
-
 /* ======== ARTICLE STYLES ========*/
 
-
-main {
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    overflow: hidden;
-}
 
 .blogArticle {
     background: var(--2nd-bg-color);
     margin: 1rem;
-    min-height: 10rem;
+    min-height: 20rem;
     overflow: hidden;
-    max-width: 80vw;
-    margin: 1rem 0;
+    max-width: 85vw;
+    /* margin: 1rem 0; */
     border-style: solid hidden solid hidden;
     border-color: var(--main-border-color);
     border-width: 3px;
     border-radius: 10px;
-    /* grid-area: blogArticle; */
 }
 
 h3 {
+    min-height: 80px;
     font-size: 2.5rem;
     text-align: center;
     border-style: hidden hidden groove hidden;
     border-color: var(--main-border-color);
     border-width: 5px;
-    padding: 20px 0px;
+    padding: 20px 20px;
 }
 
 
@@ -230,11 +217,87 @@ h3 {
     margin: 15px 20px;
 }
 
-footer {
+/* ========= PROJECTS PAGE CAROUSEL ======== */
+
+.slider {
+    width: 85vw;
+    min-height: 500px;
+    overflow: hidden;
+    position: relative;
+    background: var(--2nd-bg-color);
+    margin: 1rem;
+    margin: 1rem 0;
+    border-style: solid hidden solid hidden;
+    border-color: var(--main-border-color);
+    border-width: 3px;
+    border-radius: 10px;
 }
 
-.itsTheFooter {
-    /* grid-area: itsTheFooter; */
+.slider .slider-item {
+    width: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 400ms;
+}
+
+.slider .slider-item.active,
+.slider .slider-item.prev-item,
+.slider .slider-item.next-item {
+    display: block;
+}
+
+.slider-control-prev,
+.slider-control-next {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+    top: 90%;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    transition: opacity 300ms;
+}
+
+.slider-control-prev {
+    left: 20px;
+}
+
+.slider-control-prev:hover {
+    opacity: 1;
+}
+
+.slider-control-next {
+    right: 20px;
+}
+
+.slider-item.prev-item {
+    transform: translateX(-100%);
+}
+
+.slider-item.next-item {
+    transform: translateX(100%);
+}
+
+.slider-item.prev-item,
+.slider-item.active.slide-next {
+    transform: translateX(-100%);
+}
+
+.slider-item.active.slide-prev,
+.slider-item.next-item {
+    transform: translateX(100%);
+}
+
+.slider-item.prev-item.slide-end,
+.slider-item.next-item.slide-end {
+    transform: translateX(0);
+}
+
+#portfolioImage {
+    margin-top: 2rem;
+    max-width: 90%;
+    width: auto;
 }
 
 /* ========= DESKTOP STYLE ========*/
@@ -250,9 +313,10 @@ footer {
     .profileIcon {
         border-radius: 100px;
         max-width: 150px;
-        /* grid-area: profileIcon; */
     }
-    nav {
+
+    #expanded {
+        display: flex;
         font-size: 3rem;
         background: var(--nav-bg-color);
         min-width: 10rem;
@@ -264,6 +328,26 @@ footer {
         margin-bottom: 40px;
         position: absolute;
         float: left;
+        }
+
+    #kebabbed {
+        display: none;
+        font-size: 0rem;
+        background: var(--nav-bg-color);
+        width: 1rem;
+        min-height: 240px;
+        flex-direction: column;
+        justify-content: space-around;
+        border-style: solid dashed solid hidden;
+        padding: 5px;
+        border-width: 5px;
+        margin-bottom: 40px;
+        position: absolute;
+        float: left;
+        }
+
+    #navToggler {
+        display: flex;
     }
 
     .navLinks {
@@ -271,11 +355,19 @@ footer {
     }
 
     .blogArticle {
-        max-width: 50vw;
+        max-width: 70vw;
+        margin-left: 10rem;
         border-style: solid hidden solid hidden;
         justify-content: center;
         border-width: 5px;
         border-radius: 10px;
-        /* grid-area: blogArticle; */
     }
+
+/* ========= PROJECTS PAGE CAROUSEL - DESKTOP EDITION, YOOOOO~ ======== */
+
+    .slider {
+        max-width: 70vw;
+        margin-left: 10rem;
+    }
+    
 }

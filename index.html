@@ -22,13 +22,13 @@
 		<!-- initial top-level stuff people will see -->
 		<label class="switch">
 			<input class="modeSwitch" type="checkbox" onClick="toggleDarkMode()" />
-			<span class="slider round"></span>
+			<span class="clicker round"></span>
 		</label>
 		<header>
 			<div class="whoIsMe">
 				<img
 					class="profileIcon"
-					src="./assets/XzaLvuO.jpg"
+					src="./assets/fMNV9jR.jpg"
 					alt="the face of someone you might be able to trust, but you're not sure yet!"
 				/>
 				<div class="myDetails">
@@ -46,12 +46,19 @@
 				</div>
 			</div>
 			<!-- navigation bar for the website -->
-			<nav>
+			<nav id="expanded">
 				<a class="navLinks" href="./index.html">Home</a>
 				<a class="navLinks" href="./bio.html">Bio</a>
 				<a class="navLinks" href="./projects.html">Projects</a>
 				<a class="navLinks" href="./resume.html">Resume</a>
 			</nav>
+			<nav id="kebabbed">
+				<a class="navLinks" href="./index.html">Home</a>
+				<a class="navLinks" href="./bio.html">Bio</a>
+				<a class="navLinks" href="./projects.html">Projects</a>
+				<a class="navLinks" href="./resume.html">Resume</a>
+			</nav>
+			<button id="navToggler">Nav</button>
 		</header>
 		<main>
 			<article class="blogArticle">
@@ -96,7 +103,7 @@
 				</p>
 			</article>
 			<article class="blogArticle">
-				<h3>Las Vegas Bodies piling up</h3>
+				<h3>Did you check your sanity meter today?</h3>
 				<p class="blogText">
 					Lorem ipsum dol111ll1ll1llll11or sit, amet consectetur adipisicing
 					elit. Placeat similique nemo obcaecati non deserunt, eaque iure odio
@@ -111,7 +118,7 @@
 					provident?
 				</p>
 			</article>
-			<footer class="itsTheFooter">&copy; 2022 Soma Muñoz</footer>
 		</main>
+		<footer class="itsTheFooter">&copy; 2022 Soma Muñoz</footer>
 	</body>
 </html>
