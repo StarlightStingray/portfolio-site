@@ -9,7 +9,7 @@
 
 3. Installation instructions:
 
-    Simply download and open up the porfolio-site folder, and open index.html using Chrome or Firefox, or drop the entire folder into an online site-hosting service.
+   Simply download and open up the porfolio-site folder, and open index.html using Chrome or Firefox, or drop the entire folder into an online site-hosting service.
 
 4. User stories
 
@@ -40,5 +40,6 @@ https://user-images.githubusercontent.com/104736102/170339635-464fbc2c-75cc-4a11
 -Formatting is a bit strange, particularly around the nav bar, on ultra-narrow displays like the Galaxy Fold
 -Footer remains a bit elusive in positioned. It is currently set to rest at the bottom center of the website, but using a large amount of top-margin to get it to be positioned correctly. Allowing it to sit at the bottom of the website using various formatting options leads to strange behavior on at least a few possible devices.
 -Using freely distributed buttons for the carousel in the projects page. Serviceable, but they feel more than a little out of place with the rest of the website's design. I would like to implement custom icons for this at some point.
--Carousel was a little difficult to implement due to the novelty of it, and especially to have it conform to the formatting and styles of the rest of the website. It was pretty broken for most of its' implementation up until the very end.
+-Carousel was a little difficult to implement due to the novelty of it, and especially to have it conform to the formatting and styles of the rest of the website. It was pretty broken for most of its' implementation up until the very end. For a short while there the Left Button didn't work until I figured out it wasn't removing the classes from each index item in the slide correctly when you clicked it (it was set to search for and remove the class items that the NEXT button is supposed to take care of instead. This drove me nuts and almost made me stop working on the carousel entirely)
 -Website needs better labeling for the sake of screen readers.
+-The desktop version of the site has a Nav button that toggles the Navigation Bar on the left side of the page from its' full size to a more compact size. Originally, the nav bar was going to stretch up the whole side of the website, but it became too complicated a problem to make it render that way (because I'm still struggling with Flexbox) in the first place, much less figure out a way to style it that made sense and was appealing, but that whole side-bar was something I intended to have collapse with a button click. Instead the significantly-downscaled nav bar now simply becomes tiny and the font-size is reduced to zero. It does what I want it to, but it doesn't have the smooth transition quality I originally wanted to give it and at this point in time I am altogether too perfectly ready to move on past it - I have been starting at this website all weekend long and I need a break from it. @~@

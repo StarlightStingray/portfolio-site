@@ -1,3 +1,6 @@
+const mainNav = document.getElementById('expanded');
+const alterNav = document.getElementById('kebabbed');
+
 //js to ensure light/dark mode rule is followed according to user preference.
 function toggleDarkMode() {
 	if (document.documentElement.classList.contains('dark')) {
@@ -16,6 +19,13 @@ function toggleDarkMode() {
 			document.documentElement.classList.add('dark');
 		}
 	}
+}
+
+document.getElementById('navToggler').addEventListener('click', toggleNav);
+
+function toggleNav(event) {
+	mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+	alterNav.style.display = alterNav.style.display === 'none' ? 'flex' : 'none';
 }
 
 class Slider {
@@ -72,12 +82,12 @@ class Slider {
 			this.sliderItems[this.prevItemIndex].classList.add('active');
 		}, 20);
 		setTimeout(() => {
-			this.sliderItems[this.nextItemIndex].classList.remove(
-				'next-item',
+			this.sliderItems[this.prevItemIndex].classList.remove(
+				'prev-item',
 				'slide-end'
 			);
 			this.sliderItems[this.currentIndex].classList.remove(
-				'slide-next',
+				'slide-prev',
 				'active'
 			);
 			this.isSliding = false;
